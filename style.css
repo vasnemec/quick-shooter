@@ -1,0 +1,84 @@
+:root {
+  --bg-sky: #9cc9d8;
+  --bg-ground: #5a6b3f;
+  --ui: #0b1b1f;
+  --ui-accent: #f0b24a;
+  --text: #f6f3e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #101417;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+  color: var(--text);
+  overflow: hidden;
+  touch-action: none;
+}
+
+#game {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+#ui {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#status {
+  background: color-mix(in srgb, var(--ui) 85%, transparent);
+  border: 1px solid #2c3d43;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  pointer-events: auto;
+}
+
+#enable-motion {
+  background: var(--ui-accent);
+  color: #241506;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  pointer-events: auto;
+}
+
+#enable-motion.hidden {
+  display: none;
+}
+
+#ammo {
+  background: color-mix(in srgb, var(--ui) 85%, transparent);
+  border: 1px solid #2c3d43;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  pointer-events: auto;
+}
+
+@media (max-width: 600px) {
+  #ui {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
